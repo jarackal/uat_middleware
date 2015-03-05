@@ -1,0 +1,53 @@
+<assembly>
+    <id>bin</id>
+
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <includeSiteDirectory>false</includeSiteDirectory>
+
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>lib/java</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <directory>src/main/sh/service</directory>
+            <includes>
+                <include>uat_web_service.sh</include>
+            </includes>
+            <outputDirectory/>
+            <fileMode>0755</fileMode>
+        </fileSet>
+
+        <fileSet>
+            <directory>src/main/sh/service</directory>
+            <includes>
+                <include>uat_app_service.sh</include>
+            </includes>
+            <outputDirectory/>
+            <fileMode>0755</fileMode>
+        </fileSet>
+
+        <fileSet>
+            <directory>src/main/sh/setup</directory>
+            <includes>
+                <include>uat_setup.sh</include>
+            </includes>
+            <outputDirectory/>
+            <fileMode>0755</fileMode>
+        </fileSet>
+
+        <fileSet>
+            <directory/>
+            <includes>
+                <include/>
+            </includes>
+            <outputDirectory>resources/config</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
